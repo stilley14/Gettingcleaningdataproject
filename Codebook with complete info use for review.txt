@@ -1,8 +1,26 @@
 Code Book
 This code book summarizes the resulting data fields in tidy_dataset.txt
+
+Data Set Information:
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+Attribute Information:
+
+For each record in the dataset it is provided: 
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
 Identifiers
 * subject - The ID of the test subject
 * activity - The type of activity performed when the corresponding measurements were taken
+
+
 Data Set (referenced from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#)
 The dataset includes the following files:
 =========================================
@@ -19,6 +37,17 @@ The following files are available for the train and test data. Their description
 * 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
 * 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
 * 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+
+Description and Units
+subjectID - ID of the subject undertaking the activity (1-30)
+
+activityID - ID indicating the type of activity (1-6)
+
+activityType - WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING (corresponding to acivityID from 1 to 6 respectively)
+
+Any variable with the word 'Time' has units in seconds.
+
+Any variable with the word 'Frequency' has units in Hz.
 
 
 
@@ -108,10 +137,11 @@ Measurements in Data Set
 
 
 Activity Labels
-* V1V211WALKING22WALKING_UPSTAIRS33WALKING_DOWNSTAIRS44SITTING55STANDING66LAYING
+* V1V211WALKING22WALKING_UPSTAIRS33WALKING_DOWNSTAIRS44SITTING55STANDING66LAYING
 
 
-Screenshot of Tidy Data in R
+Reference: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#
+
 
 
 
